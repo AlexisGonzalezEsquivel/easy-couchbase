@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="alexis.com.arqui.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewRecordCount"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/buttonCreateStudent"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="" />
+
+    <include
+        layout="@layout/content_main"
+        android:layout_height="512dp"
+        android:id="@+id/include" />
+
+    <Button
+        android:id="@+id/buttonCreateStudent"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom|right"
+        android:text="Create Student"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="top|left" />
+
+    <ScrollView
+        android:id="@+id/scrollViewRecords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewRecordCount" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRecords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
